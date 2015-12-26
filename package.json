@@ -1,0 +1,31 @@
+{
+  "name": "weather-forecast-app",
+  "version": "1.0.0",
+  "description": "an app to get weather in different cities",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-sobolev/weatherForecastApp.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alex-sobolev/weatherForecastApp/issues"
+  },
+  "homepage": "https://github.com/alex-sobolev/weatherForecastApp#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.16",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6"
+  }
+}
