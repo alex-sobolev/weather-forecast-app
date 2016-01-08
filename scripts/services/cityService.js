@@ -23,7 +23,7 @@ function cityService($resource, $routeParams) {
 			return Math.round(degK - 273.15);
 		} else if(system === 'Kelvin'){
 			return degK;
-		} else {
+		}  else {
 			return;
 		}
 	}

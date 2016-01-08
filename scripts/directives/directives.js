@@ -1,4 +1,4 @@
-weatherApp.directive('weatherReport', function("cityService") {
+weatherApp.directive('weatherReport', function() {
 
     return {
         restrict: 'E',
