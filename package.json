@@ -2,7 +2,7 @@
   "name": "weather-forecast-app",
   "version": "1.0.0",
   "description": "an app to get weather in different cities",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "test": "tests"
   },

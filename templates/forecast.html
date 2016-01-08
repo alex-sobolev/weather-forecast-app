@@ -1,0 +1,45 @@
+<p><a href="#/">Back to search</a></p>
+
+<div class="row">
+
+	<h3 class='col-md-6'>A weather forecast for: {{city}}</h3>
+
+	<div class="btn-group col-md-3 col-md-offset-3" role="group" aria-label="...">
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Celsius'">Celsius</button>
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Fahrenheit'">Fahrenheit</button>
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Kelvin'">Kelvin</button>
+	</div>
+
+</div>
+
+
+<div class="row">
+	<div class='days-amount'>
+		<span>Days: </span>
+		<a href="#/forecast/2" ng-class="{'bg-primary' : days ==='2'}">2</a>
+		| <a href="#/forecast/5" ng-class="{'bg-primary' : days ==='5'}">5</a>
+		| <a href="#/forecast/7" ng-class="{'bg-primary' : days ==='7'}">7</a>
+	</div>
+</div>
+
+<div  ng-repeat='weather in weatherResult.list'>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Date: {{convertToDate() | date: }}</h3>
+				</div>
+				<div class="panel-body">
+					<span class='display-temp'>Morning:</span> {{convertToStandard({temp: weatherDay.temp.morn})}} <br>
+					<span class='display-temp'>Day:</span> {{convertToStandard({temp: weatherDay.temp.day, degreeSys: degreeSys})}} <br>
+					<span class='display-temp'>Evening:</span> {{convertToStandard({temp: weatherDay.temp.eve, degreeSys: degreeSys})}}
+				</div>
+			</div>
+
+<!-- <weather-report weather-day='weather' convert-to-standard='convertToDegreeSystem(temp, degreeSys)' convert-to-date='convertToDate(dt)' date-format='MMM d, y'>
+	</weather-report> -->
+
+		</div>
+	</div>
+</div>
+

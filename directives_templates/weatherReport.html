@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Date: {{convertToDate({dt: weatherDay.dt}) | date: dateFormat}}</h3>
+	</div>
+	<div class="panel-body">
+		<span class='display-temp'>Morning:</span> {{convertToStandard({temp: weatherDay.temp.morn})}} <br>
+		<span class='display-temp'>Day:</span> {{convertToStandard({temp: weatherDay.temp.day, degreeSys: degreeSys})}} <br>
+		<span class='display-temp'>Evening:</span> {{convertToStandard({temp: weatherDay.temp.eve, degreeSys: degreeSys})}}
+	</div>
+</div>

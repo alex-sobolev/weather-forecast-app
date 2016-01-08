@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='weatherApp'>
 <head>
-  <!-- set encoding for the page-->
-  <meta charset="UTF-8">
-  <!-- set device width for responsive layout -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- set title of the page to be displayed on tab -->
-  <title>Weather forecast for your city</title>
-  <!-- add twitter bootstrap css file for styling -->
-  <link rel="stylesheet" type="text/css" href="scripts\lib\bootstrap-3.3.6-dist\css\bootstrap.min.css">
-  <!-- load our custom styles css file -->
-  <link rel="stylesheet" type="text/css" href="styles\styles.css">
+	<!-- set encoding for the page-->
+	<meta charset="UTF-8">
+	<!-- set device width for responsive layout -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- set title of the page to be displayed on tab -->
+	<title>Weather forecast for your city</title>
+	<!-- add twitter bootstrap css file for styling -->
+	<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<!-- load our custom styles css file -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-
-<div class="container-fluid">
-
-  <header>
-    <div class="panel panel-primary center">
-      <div class="panel-heading">
-        <h3 class="panel-title">Check the weather</h3>
-      </div>
-      <div class="panel-body">
-        Checkout the weather forecast before going out to make sure you are dressed properly
-      </div>
-    </div>
-  </header>
-</div>
-
-<div class="container-fluid">
-  
-</div>
+	<div class="page-wrapper">
+		<div class="container">
+			<header>
+				<nav class='navbar navbar-default'>
+					<div class="navbar-header">
+						<a href="#/" class="navbar-brand">Weather forecast check-point</a>
+					</div>
+					<ul class='nav navbar-nav navbar-right custom-home-btn'>
+						<li><a href="#/"><i class='fa fa-home'>Home</i></a></li>
+					</ul>
+				</nav>
+			</header>
+			<main ng-view></main>
+		</div>
+	</div>
 
 
 
@@ -38,18 +35,29 @@
 
 
 
-  <!-- load angular.js v. 1.4.8 -->
-  <script src='scripts\lib\angular\angular.js'></script>
-  <!-- load angular dependencies -->
-  <!-- load angular-route for routing the app-->
-  <script src='scripts\lib\angular\angular-route.js'></script>
-  <!-- load angular-resource for http get requests-->
-  <script src='scripts\lib\angular\angular-resource.js'></script>
-  <!-- load angular-mocks for testing -->
-  <script src='scripts\lib\angular\angular-mocks.js'></script>
-  <!-- laod jquery for twitter bootstrap -->
-  <script src='scripts\lib\jquery-2.1.4.min.js'></script>
-  <!-- load bootstrap js file for styling -->
-  <script src='scripts\lib\bootstrap-3.3.6-dist\js\bootstrap.min.js'></script>
+
+	<!-- load angular.js v. 1.4.8 -->
+	<script src='scripts/lib/angular/angular.js'></script>
+	<!-- load angular dependencies -->
+	<!-- load angular-route for routing the app-->
+	<script src='scripts/lib/angular/angular-route.js'></script>
+	<!-- load angular-resource for http get requests-->
+	<script src='scripts/lib/angular/angular-resource.js'></script>
+	<!-- load angular-mocks for testing -->
+	<script src='scripts/lib/angular/angular-mocks.js'></script>
+	<!-- laod jquery for twitter bootstrap -->
+	<script src='scripts/lib/jquery-2.1.4.min.js'></script>
+	<!-- load bootstrap js file for styling -->
+	<script src='scripts/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
+	<script src='app.js'></script>
+	<!-- load a custom service to share data and logic between pages  -->
+	<script src='scripts/services/cityService.js'></script>
+	<!-- load a controller for the main page -->
+	<script src='scripts/controllers/homeController.js'></script>
+	<!-- load controller for the weather forecast result page -->
+	<script src='scripts/controllers/forecastController.js'></script>
+	<!-- load script for directives -->
+	<!-- <script src='scripts/directives/directives.js'></script> -->
+
 </body>
 </html>

@@ -3,6 +3,42 @@
   padding: 0;
 }
 
+/*sticky footer fix */
+html,
+body {
+  height: 100%;
+  /*background-color: #F0F0F0;*/
+  font-family: 'Myriad Pro', sans-serif;
+}
+.page-wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+footer {
+  display: flex;
+  height: 60px;
+  background-color: #5cb85c;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+} /*END of sticky footer fix */
+
+.float-right {
+  float: right;
+}
+
+.custom-home-btn {
+  padding-right: 15px;
+  font-size: 16px;
+}
+
 .center {
   text-align: center;
+}
+
+.display-temp {
+  display: inline-block;
+  width: 100px;
 }
