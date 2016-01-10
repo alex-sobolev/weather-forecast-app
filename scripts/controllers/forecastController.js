@@ -3,11 +3,9 @@ weatherApp.controller('forecastController', ['$scope', 'cityService', function($
 	$scope.city = cityService.city;
 	$scope.days = cityService.days;
 
-	$scope.weatherResult =  cityService.weatherResult ($scope.city, $scope.days);
+	$scope.weatherResult =  cityService.weatherResult($scope.city, $scope.days);
 
-	$scope.convertToDegreeSystem = function(degK, system) {
-		cityService.convertToDegreeSystem (degK, system);
-	};
+	$scope.convertToDegreeSystem = cityService.convertToDegreeSystem;
 
 
 	$scope.degreeSys = cityService.degreeSys;
