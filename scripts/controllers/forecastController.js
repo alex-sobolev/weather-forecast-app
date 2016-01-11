@@ -4,9 +4,9 @@ weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityServ
 	$scope.days = $routeParams.days || '2';
 
 
-	// $scope.$watch('days', function(){
-	// 	cityService.days = $scope.days;
-	// });
+	$scope.$watch('days', function(){
+		cityService.days = $scope.days;
+	});
 
 	$scope.weatherResult =  cityService.weatherResult($scope.city, $scope.days);
 

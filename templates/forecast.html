@@ -5,9 +5,9 @@
 	<h3 class='col-md-6'>A weather forecast for: {{city}}</h3>
 
 	<div class="btn-group col-md-3 col-md-offset-3" role="group" aria-label="...">
-		<button type="button" class="btn btn-default" ng-click="degreeSys='Celsius'">Celsius</button>
-		<button type="button" class="btn btn-default" ng-click="degreeSys='Fahrenheit'">Fahrenheit</button>
-		<button type="button" class="btn btn-default" ng-click="degreeSys='Kelvin'">Kelvin</button>
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Celsius'" ng-class='{"active-button" : degreeSys==="Celsius"}'>Celsius</button>
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Fahrenheit'" ng-class='{"active-button" : degreeSys==="Fahrenheit"}'>Fahrenheit</button>
+		<button type="button" class="btn btn-default" ng-click="degreeSys='Kelvin'" ng-class='{"active-button" : degreeSys==="Kelvin"}'>Kelvin</button>
 	</div>
 
 </div>
@@ -22,7 +22,6 @@
 	</div>
 </div>
 
-
 <div  ng-repeat='weather in weatherResult.list'>
 	<div class="row">
 		<div class="col-md-12">
@@ -31,17 +30,11 @@
 					<h3 class="panel-title">Date: {{convertToDate(weather.dt) | date: 'MMM d, y'}}</h3>
 				</div>
 				<div class="panel-body">
-
 					<span class='display-temp'>Morning:</span> {{convertToDegreeSystem(weather.temp.morn, degreeSys)}} <br>
 					<span class='display-temp'>Day:</span> {{convertToDegreeSystem(weather.temp.day, degreeSys)}} <br>
 					<span class='display-temp'>Evening:</span> {{convertToDegreeSystem(weather.temp.eve, degreeSys)}}
-
 				</div>
 			</div>
-
-<!-- <weather-report weather-day='weather' convert-to-standard='convertToDegreeSystem(temp, degreeSys)' convert-to-date='convertToDate(dt)' date-format='MMM d, y'>
-	</weather-report> -->
-
 		</div>
 	</div>
 </div>

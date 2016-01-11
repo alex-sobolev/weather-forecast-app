@@ -5,7 +5,7 @@ cityService.$inject = ['$resource'];
 function cityService($resource) {
 
 	this.city = 'Moscow, Russia';
-
+	this.days = '2';
 
 	this.weatherResult = function(city, days) {
 
