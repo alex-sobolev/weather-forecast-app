@@ -1,9 +1,14 @@
-weatherApp.controller('forecastController', ['$scope', 'cityService', function($scope, cityService) {
+weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityService', function($scope, $routeParams, cityService) {
 
 	$scope.city = cityService.city;
-	$scope.days = cityService.days;
+	$scope.days = $routeParams.days || '2';
 
-	$scope.weatherResult =  cityService.weatherResult ($scope.city, $scope.days);
+
+	// $scope.$watch('days', function(){
+	// 	cityService.days = $scope.days;
+	// });
+
+	$scope.weatherResult =  cityService.weatherResult($scope.city, $scope.days);
 
 	$scope.convertToDegreeSystem = cityService.convertToDegreeSystem;
 
@@ -14,9 +19,7 @@ weatherApp.controller('forecastController', ['$scope', 'cityService', function($
 		cityService.degreeSys = $scope.degreeSys;
 	});
 
-	$scope.$watch('days', function(){
-		cityService.days = $scope.days;
-	});
+
 
 	$scope.convertToDate = cityService.convertToDate;
 

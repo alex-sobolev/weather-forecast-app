@@ -22,6 +22,7 @@
 	</div>
 </div>
 
+
 <div  ng-repeat='weather in weatherResult.list'>
 	<div class="row">
 		<div class="col-md-12">
@@ -30,9 +31,11 @@
 					<h3 class="panel-title">Date: {{convertToDate(weather.dt) | date: 'MMM d, y'}}</h3>
 				</div>
 				<div class="panel-body">
+
 					<span class='display-temp'>Morning:</span> {{convertToDegreeSystem(weather.temp.morn, degreeSys)}} <br>
 					<span class='display-temp'>Day:</span> {{convertToDegreeSystem(weather.temp.day, degreeSys)}} <br>
 					<span class='display-temp'>Evening:</span> {{convertToDegreeSystem(weather.temp.eve, degreeSys)}}
+
 				</div>
 			</div>
 
