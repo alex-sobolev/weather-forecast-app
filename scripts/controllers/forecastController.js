@@ -20,7 +20,6 @@ weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityServ
 	});
 
 
-
 	$scope.convertToDate = cityService.convertToDate;
 
 }]);
