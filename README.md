@@ -1,5 +1,5 @@
 # weatherForecastApp<br>
-<h3>An angularJS app for getting a weather forecast for different cities.</h3>
+<h3>An angularJS app for getting a weather forecast for different cities around the world.</h3>
 In order to run this project you will need:<br>
 1) to install nodejs first, if you don't have it yet. Go to https://nodejs.org.<br>
 2) Then you need to run an <code>npm install</code> command from the project's folder to get the necessary nodejs packages.<br>
